@@ -5,11 +5,11 @@ import { AboutPageComponent } from './shared/pages/about-page/about-page.compone
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 
 const routes: Routes = [ //definiendo las rutas
-    {
-        path: '',
-        component: HomePageComponent,
-        //children es un arreglo con otras rutas
-    },
+    // {
+    //     path: '',
+    //     component: HomePageComponent,
+    //     //children es un arreglo con otras rutas
+    // },
     {
         path: 'about',
         component: AboutPageComponent
@@ -24,7 +24,7 @@ const routes: Routes = [ //definiendo las rutas
     },
     {
         path: '**', //cualquier otra ruta que no este definida en el arreglo de rutas se redireccionara a home
-        redirectTo: ''
+        redirectTo: 'countries'
     },
 ]
 

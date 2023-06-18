@@ -23,6 +23,10 @@ const routes: Routes = [
         path: 'by/:id',
         component: CountryPageComponent,
     },
+    {
+        path: '**', //cualquier otra ruta que no este definida en el arreglo de rutas se redireccionara a home
+        redirectTo: 'by-capital'
+    },
 ]
 
 @NgModule({

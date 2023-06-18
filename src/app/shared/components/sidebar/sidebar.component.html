@@ -3,7 +3,7 @@
 
 <ul class="list-group">
     <!-- para transformar el list item en un link de navegacion que reconoce el router tenemos que poner routerLink="path"-->
-  <li 
+  <!-- <li 
     routerLink=""
     [routerLinkActiveOptions]="{exact: true}"
     routerLinkActive="active"
@@ -22,6 +22,13 @@
     routerLinkActive="active" 
     class="list-group-item">
       Contact page
+  </li> -->
+  
+  <li 
+    routerLink="countries/by-capital"
+    routerLinkActive="active" 
+    class="list-group-item">
+      Countries by capital
   </li>
 
   <li 
@@ -32,19 +39,13 @@
   </li>
 
   <li 
-    routerLink="countries/by-capital"
-    routerLinkActive="active" 
-    class="list-group-item">
-      Countries by capital
-  </li>
-
-
-  <li 
     routerLink="countries/by-region"
     routerLinkActive="active" 
     class="list-group-item">
       Countries by region
   </li>
+
+
 
 </ul>
 
