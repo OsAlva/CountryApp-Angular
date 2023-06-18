@@ -13,11 +13,10 @@
 <hr>
 <div class="row">
     <div class="col">
+        <hr>
         <!-- Tabla de Results -->
-        <ul>
-            <li *ngFor="let country of countries">
-                   {{ country.capital}} - {{ country.population}} 
-            </li>
-        </ul>
+        <!-- le vamos a mandar nuestro paises -> [] -->
+        <countries-table [countries]="countries"></countries-table>
+        
     </div>
 </div>

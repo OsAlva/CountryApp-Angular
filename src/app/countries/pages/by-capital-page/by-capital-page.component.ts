@@ -21,7 +21,7 @@ export class ByCapitalPageComponent {
     //ya lo tenemo inyectado en el constructor asi que lo llamamos
     this.countriesService.searchCapital(term)
       .subscribe( countries => {
-        this.countries = countries;
+        this.countries = countries; //esto es lo que se va a mostrar en el html
       }, (err) => {
         console.log('Error');
         console.log(err);
