@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { Country } from '../interfaces/country';
 
 @Injectable({providedIn: 'root'})
-export class ServiceNameService {
+export class CountriesService {
 
-    private apiurl = 'https://restcountries.com/v3.1/';
+    private apiurl:string = 'https://restcountries.com/v3.1';
 
 
     constructor(private http: HttpClient) { }
