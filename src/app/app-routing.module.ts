@@ -7,7 +7,8 @@ import { ContactPageComponent } from './shared/pages/contact-page/contact-page.c
 const routes: Routes = [ //definiendo las rutas
     {
         path: '',
-        component: HomePageComponent
+        component: HomePageComponent,
+        //children es un arreglo con otras rutas
     },
     {
         path: 'about',
