@@ -1,1 +1,22 @@
-<p>by-region-page works!</p>
+<h2>Por Pais</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- SearchBox -->
+        <shared-search-box 
+            (onValue)="searchByRegion($event)"
+            placeholder="Buscar por region"></shared-search-box>
+        
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <hr>
+        <!-- Tabla de Results -->
+        <!-- le vamos a mandar nuestro paises -> [] -->
+        <countries-table [countries]="countries"></countries-table>
+        
+    </div>
+</div>
