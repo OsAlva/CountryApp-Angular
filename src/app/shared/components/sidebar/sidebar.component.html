@@ -1,0 +1,29 @@
+<h2>Paises</h2>
+<hr>
+
+<ul class="list-group">
+    <!-- para transformar el list item en un link de navegacion que reconoce el router tenemos que poner routerLink="path"-->
+  <li 
+    routerLink=""
+    [routerLinkActiveOptions]="{exact: true}"
+    routerLinkActive="active"
+    class="list-group-item">
+        Home page
+  </li>
+  <li 
+    routerLink="about"
+    routerLinkActive="active" 
+    class="list-group-item">
+        About page
+  </li>
+
+  <li 
+  routerLink="contact"
+  routerLinkActive="active" 
+  class="list-group-item">
+      Contact page
+</li>
+
+</ul>
+
+<!--routerLinkActive="active"  para que se vea el link activo-->
