@@ -19,6 +19,10 @@ const routes: Routes = [ //definiendo las rutas
         component: ContactPageComponent
     },
     {
+        path: 'countries', 
+        loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule) //lazy loading
+    },
+    {
         path: '**', //cualquier otra ruta que no este definida en el arreglo de rutas se redireccionara a home
         redirectTo: ''
     },
@@ -27,6 +31,7 @@ const routes: Routes = [ //definiendo las rutas
 @NgModule({
     imports: [
         RouterModule.forRoot(routes), //importando el modulo de rutas de angular y pasandole las rutas definidas en el arreglo 
+        
 
     ],
     exports: [
