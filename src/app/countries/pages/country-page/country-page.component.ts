@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CountriesService } from '../../services/countries.service';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-country-page',
@@ -18,20 +19,17 @@ export class CountryPageComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe( ({id}) => {
-    
-      this.searchCountry(id);
+    this.activatedRoute.params
+    .pipe(
+      switchMap( ({id}) => this.CountriesService.searchCountryByAlphaCode(id)), //recibe el valor anterior y retorna un nuevo observable
+    )
+    .subscribe( country => {
+      console.log(country);
+     
 
 
-    } );
-    
-  }
-
-  searchCountry(code: string) {
-    this.CountriesService.searchCountryByAlphaCode(code)
-      .subscribe( country => {
-        console.log(country);
     });
+    
   }
 
   
