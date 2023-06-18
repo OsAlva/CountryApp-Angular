@@ -3,5 +3,8 @@
     type="text"
     [placeholder]="placeholder" 
     class="form-control"
+    (keyup.enter)="emitValue(textInput.value)"
+    #txtInput
 >
 <!-- si el placeholder lo quiero recibir como un argumento uso [] y luego me voy al ts a escribir un @input -->
+<!-- 117 luego de hacer el emiter en ts aqui ponemos con que teclas se activara (keyup.enter) -->
